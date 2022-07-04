@@ -7,7 +7,7 @@ const axios = require("axios");
 const Profile = () => {
 	useEffect(() => {
 		const getUser = async () => {
-			const { data } = await axios.get("/api/v1/auth/currentUser", {
+			const { data } = await axios.get("https://nest-job-tracker.herokuapp.com/api/v1/auth/currentUser", {
 				headers: {
 					Authorization: `Bearer ${localStorage.getItem("token")}`,
 				},
